@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <title>Login Page</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+        <form>
+          <h3>Polinfoman System</h3>
+
+          
+          
+  
+          <label for="username">Username</label>
+          <input type="text"  id="username">
+  
+          <label for="password">Password</label>
+          <input type="password" id="password">
+
+          <label class="checkbox">
+            <input type="checkbox" value="remember-me" id="remember_me"> Remember me
+        </label>
+  
+          <button type="submit" onclick="auth(event)" class="login">Log In</button>
+          <button class="register">Register</button>
+        
+      </form>
+
+      </div>
+    </div>
+  </body>
+  <script>
+    function auth(event) {
+          event.preventDefault();
+
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+
+          if (username === "admin" && password === "admin") {
+            window.location.replace("Home.html");
+          } else {
+              alert("Invalid information");
+              return;
+          }
+    }
+ </script> 
+</html>
