@@ -2,7 +2,7 @@
 
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
-const User = require('./User');
+const Users = require('./Users');
 
 const AuditLogs = sequelize.define('audit_logs', {
     id: {
@@ -13,7 +13,7 @@ const AuditLogs = sequelize.define('audit_logs', {
     user_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: User,
+            model: Users,
             key: 'id'
         }
     },

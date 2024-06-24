@@ -1,7 +1,7 @@
 // sync.js
 // for syncing and authenticating with postgres schema to do CRUD operations
 
-const { sequelize } = require('./config/database');
+const sequelize = require('./config/database');
 
 async function syncDatabse() {
     try{

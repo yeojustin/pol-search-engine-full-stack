@@ -2,10 +2,11 @@
 
 // to refelct the schema in the Postgres for usersdb
 
+// imports
 const { DataTypes } = require('sequelize');
-const sequalize = require('../config/database');
+const sequelize = require('../config/database'); // from config/database.js
 
-const Users = sequalize.define('users', {
+const Users = sequelize.define('users', {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,

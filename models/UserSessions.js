@@ -1,7 +1,7 @@
 // models/UserSession.js
 
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const sequelize = require('../config/database'); // from config/database.js
 const User = require('./Users');
 
 const UserSessions = sequelize.define('user_sessions', {

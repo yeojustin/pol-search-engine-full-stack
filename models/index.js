@@ -1,15 +1,16 @@
 // models/index.js
 
+// const { Sequelize } = require('sequelize');
 const sequelize = require('../config/database');
 const Users = require('./Users');
 const Roles = require('./Roles');
-const UserRoles = require('./UserRoles'); // Corrected from UserRole
+const UserRoles = require('./UserRoles');
 const Permissions = require('./Permissions');
 const RolePermissions = require('./RolePermissions');
 const UserSessions = require('./UserSessions');
-const AuditLogs = require('./AuditLogs'); // Corrected from AuditLog
+const AuditLogs = require('./AuditLogs');
 
-// Define relationships
+// define associations
 Users.belongsToMany(Roles, { through: UserRoles, foreignKey: 'user_id' });
 Roles.belongsToMany(Users, { through: UserRoles, foreignKey: 'role_id' });
 
@@ -24,7 +25,8 @@ AuditLogs.belongsTo(Users, { foreignKey: 'user_id' });
 
 module.exports = {
     sequelize,
-    Users, 
+    Users,
+    Roles,
     UserRoles,
     Permissions,
     RolePermissions,

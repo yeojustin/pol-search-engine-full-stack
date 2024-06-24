@@ -1,0 +1,31 @@
+/my-project
+│
+├── /config
+│   └── database.js           // Database configuration
+│
+├── /models
+│   ├── index.js              // Sequelize models and associations
+│   ├── Users.js              // User model
+│   ├── Roles.js              // Role model
+│   ├── UserRoles.js          // UserRole model
+│   ├── Permissions.js        // Permission model
+│   ├── RolePermissions.js    // RolePermission model
+│   ├── UserSessions.js       // UserSession model
+│   └── AuditLogs.js          // AuditLog model
+│
+├── /public
+│   ├── /js
+│   │   ├── api.js            // API calls
+│   │   └── main.js           // Main frontend logic
+│   ├── /css
+│   │   └── styles.css        // Tailwind CSS styles
+│   ├── index.html            // Login page
+│   ├── dashboard.html        // Dashboard page after login
+│   └── logo.png              // Logo placeholder
+│
+├── sync.js                   // Database synchronization script
+│
+├── .env                      // Environment variables
+├── package.json              // NPM package configuration
+├── server.js                 // Main backend server file
+└── tailwind.config.js        // Tailwind CSS configuration

@@ -1,7 +1,7 @@
 // model/Role.js
 
 const { DataTypes } = require('sequelize');
-const sequalize = require('../config/database');
+const sequelize  = require('../config/database'); // from config/database.js
 
 const Roles = sequelize.define('roles', {
     id: {
